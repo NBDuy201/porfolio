@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
@@ -14,5 +15,14 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".page-container": {
+          paddingLeft: "100px",
+          paddingRight: "100px",
+        },
+      });
+    }),
+  ],
 } satisfies Config;

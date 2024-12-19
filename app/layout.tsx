@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/ui/header";
+import Header from "@/components/ui/Header/header";
 import Footer from "@/components/ui/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -28,7 +28,7 @@ export default function RootLayout({
           ${inter.variable} ${playfair.variable}`}
       >
         <Header />
-        <main className="grow">{children}</main>
+        <main className="grow page-container">{children}</main>
         <Footer />
       </body>
     </html>

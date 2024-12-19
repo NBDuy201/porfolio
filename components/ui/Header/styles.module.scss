@@ -1,0 +1,10 @@
+.header {
+  @apply flex justify-between py-5 shadow-md page-container;
+  &__nav {
+    @apply flex gap-x-10;
+
+    .selected {
+      @apply font-bold;
+    }
+  }
+}
